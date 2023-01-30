@@ -115,6 +115,7 @@ int main(int argc, char** argv) {
 		} while (temp_num_add != 0);
 	
 		print_exit(arr, logic_num, fact_num);
+		delete[] arr;
 
 	return 0;
 }

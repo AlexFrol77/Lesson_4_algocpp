@@ -74,8 +74,8 @@ int main(int argc, char** argv) {
 
 	int
 		fact_num = 0,
-		logic_num = 0,
-		flag_exit;
+		logic_num = 0;
+
 	bool
 		flag;
 	do {
@@ -86,6 +86,9 @@ int main(int argc, char** argv) {
 		print(arr, logic_num, fact_num, flag);
 		Sleep(1500);
 		flag = check_exit();
+		if (!flag) {
+			delete[] arr;
+		}
 	} while (flag);
 	system("cls");
 	std::cout << "Всего доброго!" << std::endl;
